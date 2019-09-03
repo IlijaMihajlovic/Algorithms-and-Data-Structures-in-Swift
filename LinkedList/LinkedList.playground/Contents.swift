@@ -37,6 +37,8 @@ extension LinkedList: CustomStringConvertible {
     }
 }
 
+
+
 // Now we gonna build a Linked List that manages the Node objects
 public struct LinkedList<Value> {
     
@@ -193,7 +195,37 @@ public struct LinkedList<Value> {
     }
     
     
+    ////--------------Check If The Linked List Contains a Cycle/Loop--------------------////
+    
+    
+    /*
+     So basiclly we keep two pointers to nodes (we'll call these “runners”), both starting at the first node. Every time slowRunner moves one node ahead, fastRunner moves two nodes ahead.
+     
+     If the linked list has a cycle, fastRunner will "lap" (catch up with) slowRunner, and they will momentarily equal each other.
+     
+     If the list does not have a cycle, fastRunner will reach the end.
+     
+     */
+    public mutating func containsCycle<T>(firstNode: Node<T>) -> Bool {
+        
+        var slowRunner = firstNode
+        var fastRunner = firstNode
+        
+        
+        while let nextSlowRunner = slowRunner.next,
+            let nextFastRunner = fastRunner.next?.next {
+                slowRunner = nextSlowRunner
+                fastRunner = nextFastRunner
+                
+                
+                if fastRunner === slowRunner {
+                    return true
+                }
+        }
+        return false
+    }
 }
+
 
 
 
@@ -274,5 +306,12 @@ print("Removed value: " + String(describing: removedValue2))
 
 
 
-
+//var list = LinkedList<Int>() //Check if it contains Cycle
+//
+//list.push(1)
+//list.push(2)
+//list.push(3)
+//print(list)
+//
+//list.head?.next?.next?.next = list.head
 
