@@ -7,4 +7,8 @@
 Common Algorithms and Data Structures in Swift
 ___
 
+## Requirements
+- Swift 4.2+
+- Xcode 9.2+
+___
 
