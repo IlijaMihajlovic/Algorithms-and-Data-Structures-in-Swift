@@ -7,10 +7,4 @@
 Common Algorithms and Data Structures in Swift
 ___
 
-## Side Note
-* Currently, I do not have an iPhone, so I'm unable to test the app on a physical device. I apologize in advance for maybe possible bugs.
 
-   Kind regards,
-
-   Ilija 🖖 😄
-___
