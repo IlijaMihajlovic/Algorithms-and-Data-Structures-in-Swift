@@ -3,7 +3,7 @@ import UIKit
 
 //1.
 func SpecificLetterCount(str:String, char:Character) ->Int {
-    let letters = Array(str)
+    let letters = str
     var count = 0
     
     letters.forEach { (letter) in
@@ -13,7 +13,6 @@ func SpecificLetterCount(str:String, char:Character) ->Int {
     }
     return count
 }
-
 
 //2.
 func SpecificWordCount(forString:String, inWord:String) ->Int {
