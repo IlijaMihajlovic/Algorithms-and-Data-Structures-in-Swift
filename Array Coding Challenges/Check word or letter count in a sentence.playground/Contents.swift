@@ -15,12 +15,12 @@ func specificLetterCount(str:String, char:Character) ->Int {
 }
 
 //2.
-func specificWordCount(inSentence:String, word:String) ->Int {
+func specificWordCount(inSentence:String, withWord:String) ->Int {
     let words = inSentence.components(separatedBy: " ")
     var count = 0
     
     words.forEach { (word) in
-        if word == word {
+        if word == withWord {
             count += 1
         }
     }
@@ -34,12 +34,12 @@ func countAllWords(str:String) ->[String: Int] {
     let words = str.components(separatedBy: " ")
     var wordcount = [String: Int]()
     words.forEach { (word) in
-        wordcount.updateValue(specificWordCount(inSentence: str, word: word), forKey: word)
+        wordcount.updateValue(specificWordCount(inSentence: str, withWord: word), forKey: word)
     }
 
     return wordcount
 }
 
 
-let wordCount = specificWordCount(inSentence: "Il est mon meilleur ami il est mon meilleur ami tho", word: "est")
+let wordCount = specificWordCount(inSentence: "Il est mon meilleur ami il est mon meilleur ami tho", withWord: "est")
 print("Word Count: " + String(describing: wordCount))
