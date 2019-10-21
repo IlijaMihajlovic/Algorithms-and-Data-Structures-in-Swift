@@ -9,7 +9,7 @@ func fizzBuzz(fromNum: Int, toNum: Int) {
 
     (fromNum...toNum).forEach { (num) in
 
-    // Perfrom the switch statment on the number
+    // Perform the switch statement on the number
     switch num {
         //Check if 'x' is multiple of 3 and if 'x' is multiple of 5. If yes print fizzBuzz!
     case let x where x.isMultiple(of: 3) && x.isMultiple(of: 5):
