@@ -6,7 +6,6 @@ import UIKit
 //.reversed O(n)
 //.joined Returns the concatenated elements of sequences, inserting the given separator between each element. O(n)
 
-var str = "I am Swift Developer"
 var word = "Developer"
 
 //1. Reverse Word
@@ -37,6 +36,6 @@ func reverseSentence(_ sentence: String) -> String {
 
 }
 
-let result = reverseSentence(str)
-print(result)
+
+print(reverseSentence("I am a Swift Developer"))
 
